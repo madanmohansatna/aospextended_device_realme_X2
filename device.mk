@@ -33,6 +33,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Properties
 -include $(LOCAL_PATH)/product_props.mk
+-include $(LOCAL_PATH)/vendor_props.mk
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Screen density
@@ -111,6 +112,10 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0_system \
     libhidltransport \
     libhwbinder
+
+# Freeform Multiwindow
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.freeform_window_management.xml
 
 #Hardware
 PRODUCT_COPY_FILES += \
