@@ -41,6 +41,9 @@
         <activity
             android:name=".DeviceSettingsActivity"
             android:label="@string/device_title">
+             <meta-data
+                android:name="com.android.settings.order"
+                android:value="1" /> 
             <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
                 <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
